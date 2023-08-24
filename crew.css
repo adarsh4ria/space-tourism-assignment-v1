@@ -13,9 +13,7 @@ body::before {
 }
 
 main {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: 200px;
 }
 
@@ -57,7 +55,8 @@ h4 {
 .crew-img {
   position: absolute;
   bottom: 0;
-  height: 80svh;
-  width: auto;
-  right: 10vw;
+  height: auto;
+  width: 40svw;
+  right: 5vw;
+  z-index: -1;
 }

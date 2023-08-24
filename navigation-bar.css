@@ -21,9 +21,15 @@
 }
 
 .primary-navigation-list {
-  gap: 80px;
+  gap: clamp(20px, 10svw, 35px);
 
   & span {
     font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .primary-navigation {
+    padding-top: 0;
   }
 }
