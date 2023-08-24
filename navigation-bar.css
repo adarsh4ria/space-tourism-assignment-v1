@@ -1,0 +1,29 @@
+.primary-navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  height: 96px;
+  padding-left: 25px;
+}
+
+.primary-navigation > div {
+  flex: 1;
+}
+
+.primary-navigation nav {
+  flex: 2;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(41px);
+}
+
+.primary-navigation-list {
+  gap: 80px;
+
+  & span {
+    font-weight: 700;
+  }
+}

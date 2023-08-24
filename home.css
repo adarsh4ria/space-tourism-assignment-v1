@@ -1,0 +1,30 @@
+body {
+  background-image: url('/images/home-background-desktop.png');
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: stretch;
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 400px;
+}
+
+.explore-button {
+  width: 275px;
+  aspect-ratio: 1;
+  background: var(--white);
+  color: var(--primary);
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-button:hover {
+  box-shadow: 0 0 0 100px rgba(255, 255, 255, 0.1);
+}

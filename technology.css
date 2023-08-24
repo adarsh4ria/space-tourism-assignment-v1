@@ -1,0 +1,61 @@
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('/images/background-technology.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  filter: brightness(30%);
+  z-index: -1;
+}
+
+h5 {
+  color: var(--white);
+  position: relative;
+  margin-bottom: 50px;
+}
+h5::before {
+  content: '03';
+  position: absolute;
+  left: -50px;
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+main {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 100px;
+  margin-top: 200px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    outline: 1px solid white;
+  }
+
+  & button.active {
+    background: var(--white);
+    color: var(--primary);
+  }
+}
+
+.technology-img {
+  /* max-width: 50%; */
+  max-height: 70svh;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}

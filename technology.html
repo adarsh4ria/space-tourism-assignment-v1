@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navigation-bar.css" />
+    <link rel="stylesheet" href="technology.css" />
+    <title>Space Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/technology.js" defer></script>
+  </head>
+  <body>
+    <header class="primary-navigation">
+      <div>
+        <img src="/images/icon.svg" alt="space-tourism-icon" />
+      </div>
+      <nav>
+        <ul class="primary-navigation-list">
+          <li>
+            <a href="/index.html"><span>00</span> HOME</a>
+          </li>
+          <li>
+            <a href="/destination.html"><span>01</span> DESTINATION</a>
+          </li>
+          <li>
+            <a href="/crew.html"><span>02</span> CREW</a>
+          </li>
+          <li>
+            <a class="active" href="/technology.html"
+              ><span>03</span> TECHNOLOGY</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h5>SPACE LAUNCH 101</h5>
+      <main>
+        <div class="nav">
+          <button data-technology-id="1">
+            <h4>1</h4>
+          </button>
+          <button data-technology-id="2">
+            <h4>2</h4>
+          </button>
+          <button data-technology-id="3">
+            <h4>3</h4>
+          </button>
+        </div>
+        <div>
+          <div class="nav-text">THE TERMINOLOGY...</div>
+          <h3 id="name">SPACEPORT</h3>
+          <p id="description">
+            See our planet as you've never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you're there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+        </div>
+        <div class="technology-image">
+          <img id="image" class="technology-img" />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
