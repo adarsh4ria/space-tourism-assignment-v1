@@ -51,10 +51,12 @@ h5 {
 
   & nav {
     justify-content: flex-start;
+    padding: 0;
   }
 
   & ul {
     gap: 20px;
+    padding: 0;
   }
 
   & a {

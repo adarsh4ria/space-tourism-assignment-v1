@@ -12,9 +12,10 @@
 }
 
 .icon {
+  display: block;
   margin-left: 32px;
-  min-width: 48px;
-  min-height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .hamburger-icon {
@@ -45,6 +46,18 @@
 @media screen and (max-width: 768px) {
   .primary-navigation {
     padding-top: 0;
+    height: 60px;
+  }
+
+  .primary-navigation nav {
+    padding-inline: max(5px, 1vw);
+  }
+
+  .icon {
+    margin-left: max(10px, 1vw);
+    max-width: 40px;
+    width: max(30px, 5vw);
+    aspect-ratio: 1;
   }
 }
 

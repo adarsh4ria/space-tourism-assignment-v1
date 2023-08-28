@@ -59,11 +59,11 @@ h4 {
 }
 
 .crew-img {
-  position: absolute;
-  top: 14vw;
+  /* position: absolute; */
+  /* top: 14vw; */
   height: auto;
   width: min(40svw, 100%);
-  right: 5vw;
+  /* right: 5vw; */
   z-index: -1;
 }
 
