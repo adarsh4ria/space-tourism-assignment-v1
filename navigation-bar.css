@@ -5,23 +5,37 @@
   align-items: center;
   padding-top: 25px;
   height: 96px;
-  padding-left: 25px;
 }
 
-.primary-navigation > div {
+.primary-navigation > * {
   flex: 1;
+}
+
+.icon {
+  margin-left: 32px;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.hamburger-icon {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  z-index: 9999;
 }
 
 .primary-navigation nav {
   flex: 2;
   height: 100%;
 
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(41px);
+  z-index: 9998;
 }
 
 .primary-navigation-list {
-  gap: clamp(20px, 10svw, 35px);
+  gap: clamp(5px, 2vw, 35px);
 
   & span {
     font-weight: 700;
@@ -31,5 +45,36 @@
 @media screen and (max-width: 768px) {
   .primary-navigation {
     padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hamburger-icon {
+    display: block;
+  }
+
+  .primary-navigation nav {
+    display: none;
+    position: absolute;
+    inset: 0 0 0 30%;
+  }
+
+  .primary-navigation-list {
+    margin-top: 100px;
+    flex-direction: column;
+    gap: 30px;
+
+    text-align: left;
+
+    && a::after {
+      height: 100%;
+      width: 3px;
+      top: 0;
+      left: 105%;
+    }
+  }
+
+  .primary-navigation-list span {
+    display: inline;
   }
 }

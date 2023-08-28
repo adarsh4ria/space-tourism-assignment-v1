@@ -9,6 +9,7 @@ body {
 main {
   justify-content: space-around;
   margin-top: 400px;
+  padding-inline: 25px;
 }
 
 .explore-button {
@@ -41,5 +42,9 @@ main {
 
   .explore-button {
     width: 150px;
+  }
+
+  h5 {
+    text-align: center;
   }
 }

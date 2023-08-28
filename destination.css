@@ -15,12 +15,13 @@ body::before {
 
 main {
   justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
 }
 
 h5 {
   color: var(--white);
   position: relative;
-  margin-bottom: 50px;
 }
 
 #image {
@@ -45,19 +46,15 @@ h5 {
   box-shadow: inset -80px -80px 100px black;
 }
 
-h5::before {
-  content: '01';
-  position: absolute;
-  left: -50px;
-  font-weight: 700;
-  opacity: 0.25;
-}
-
 .tabs {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 
   & nav {
     justify-content: flex-start;
+  }
+
+  & ul {
+    gap: 20px;
   }
 
   & a {
@@ -73,4 +70,40 @@ h5::before {
   justify-content: flex-start;
   gap: 50px;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .destination-image {
+    width: 300px;
+  }
+
+  .tabs nav ul {
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .destination-properties {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .destination-image {
+    width: 80vw;
+  }
+
+  .tabs nav ul {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .destination-properties {
+    flex-direction: column;
+  }
 }

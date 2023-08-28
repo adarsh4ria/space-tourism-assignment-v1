@@ -12,23 +12,18 @@ body::before {
   z-index: -1;
 }
 
-h5 {
-  color: var(--white);
-  position: relative;
-  margin-bottom: 50px;
-}
-h5::before {
-  content: '03';
-  position: absolute;
-  left: -50px;
-  font-weight: 700;
-  opacity: 0.25;
-}
-
 main {
   /* justify-content: space-between; */
   gap: 100px;
   margin-top: 200px;
+}
+
+.nav-text {
+  color: var(--secondary);
+  font-family: Barlow Condensed;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  margin-bottom: 10px;
 }
 
 .nav {
@@ -38,14 +33,18 @@ main {
 
   & button {
     width: 80px;
-    height: 80px;
+    aspect-ratio: 1;
     border-radius: 50%;
-    outline: 1px solid white;
-  }
+    outline: 1px solid rgba(255, 255, 255, 0.25);
 
-  & button.active {
-    background: var(--white);
-    color: var(--primary);
+    &:hover {
+      outline-color: #fff;
+    }
+
+    &.active {
+      background: var(--white);
+      color: var(--primary);
+    }
   }
 }
 
@@ -59,4 +58,35 @@ main {
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 40px;
+  }
+
+  .nav {
+    flex-direction: row;
+
+    & button {
+      width: 60px;
+    }
+  }
+
+  .technology-image {
+    order: -1;
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 100vw;
+  }
+
+  .technology-img {
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    width: 100%;
+  }
 }

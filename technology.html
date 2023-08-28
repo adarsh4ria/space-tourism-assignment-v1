@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navigation-bar.css" />
     <link rel="stylesheet" href="technology.css" />
+    <script src="/navigation-bar.js" defer></script>
+
     <title>Space Tourism</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,9 +20,16 @@
   </head>
   <body>
     <header class="primary-navigation">
-      <div>
+      <a href="/index.html">
         <img src="/images/icon.svg" alt="space-tourism-icon" class="icon" />
-      </div>
+      </a>
+      <button id="hamburger-menu-button">
+        <img
+          src="/images/hamburger-icon.svg"
+          alt="open-menu"
+          class="hamburger-icon"
+        />
+      </button>
       <nav>
         <ul class="primary-navigation-list">
           <li>
@@ -33,7 +42,7 @@
             <a href="/crew.html"><span>02</span> CREW</a>
           </li>
           <li>
-            <a class="active" href="/technology.html"
+            <a href="/technology.html" class="active"
               ><span>03</span> TECHNOLOGY</a
             >
           </li>
@@ -41,7 +50,7 @@
       </nav>
     </header>
     <div class="container">
-      <h5>SPACE LAUNCH 101</h5>
+      <h5><span>03</span> SPACE LAUNCH 101</h5>
       <main>
         <div class="nav">
           <button data-technology-id="1">

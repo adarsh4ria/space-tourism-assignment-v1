@@ -20,18 +20,11 @@ main {
 h5 {
   color: var(--white);
   position: relative;
-  margin-bottom: 50px;
-}
-h5::before {
-  content: '02';
-  position: absolute;
-  left: -50px;
-  font-weight: 700;
-  opacity: 0.25;
 }
 
 h4 {
   opacity: 0.25;
+  margin-bottom: 8px;
 }
 
 .crew-tabs {
@@ -46,17 +39,82 @@ h4 {
     background-color: var(--white);
     opacity: 0.25;
 
+    &&:hover {
+      opacity: 0.5;
+    }
+
     &.active {
       opacity: 1;
     }
   }
 }
 
+.crew-image {
+  margin-top: 35px;
+
+  > hr {
+    opacity: 0.25;
+    display: none;
+  }
+}
+
 .crew-img {
   position: absolute;
-  bottom: 0;
+  top: 14vw;
   height: auto;
-  width: 40svw;
+  width: min(40svw, 100%);
   right: 5vw;
   z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .crew-tabs {
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .crew-image {
+    align-self: center;
+  }
+
+  .crew-img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+
+  .crew-image > hr {
+    display: block;
+  }
+
+  .crew-img {
+    margin-top: 0;
+  }
+
+  h5 {
+    margin-bottom: 0;
+  }
+
+  .crew-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crew-tabs {
+    order: -1;
+    margin-bottom: 35px;
+  }
 }
